@@ -6,10 +6,19 @@
     @apply scroll-smooth
 }
 
+
+h1 {
+    @apply text-3xl xl:text-5xl font-black
+}
+
+p {
+    @apply xl:text-2xl text-xs
+}
+
 #hero {
     background-image: url(./assets/hero-bg.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-y: bottom;
     background-size: cover;
 }
 
@@ -23,7 +32,20 @@
 #yomoti {
     background-image: url(./assets/yomoti-bg.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-y: top;
     background-size: cover;
 }
 
+#luwaks {
+    background-image: url(./assets/luwaks-bg.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: cover;
+}
+
+#harvio {
+    background-image: url(./assets/harvio-bg.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: cover;
+}
