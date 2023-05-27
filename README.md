@@ -7,5 +7,5 @@ This website is a remade of the already existing (and hopefully soon replaced) h
 # Technologies used
 - React
 - TailwindCSS
-- React Typed
+- typed.js
 - Framer Motion
