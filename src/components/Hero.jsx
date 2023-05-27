@@ -1,16 +1,31 @@
 import React from 'react'
-import Typed from 'react-typed';
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
 const buttonClass = `font-bold text-2xl p-2 shadow border-2 rounded-xl`
 
 const Hero = () => {
+
+  const headline = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(headline.current, {
+      strings: ["Stories to be told ..."],
+      typeSpeed: 40
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, [])
+
   return (
     <div id='hero' className='h-screen text-white p-4'>
       <a href="/"><p className='fixed text-5xl font-black right-8 top-8'>H</p></a>
         <div className='pt-[50%] md:pt-[20%] md:ml-10'>
             <h1 className='uppercase font-black text-3xl md:text-5xl lg:text-7xl'>Henrik Olsson</h1>
-            <Typed className='text-xl font-semibold' strings={['Stories to be told ...']} typeSpeed={40} /> <br />
+            <span className='text-xl font-semibold' ref={headline}></span>
             <div className='flex gap-4 md:gap-8 pt-16'>
               <div className='flex flex-col md:flex-row gap-2 md:gap-8'>
                 <a href="#ooyy"><motion.button    className={buttonClass} initial={{ scale: 0, rotate: 30 }} animate={{ rotate: 0, scale: 1 }} transition={{ type: "spring", stiffness: 260, damping: 20, duration: 500}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >OOYY</motion.button></a>
