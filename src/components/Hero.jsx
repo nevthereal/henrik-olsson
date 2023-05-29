@@ -22,7 +22,7 @@ const Hero = () => {
 
   return (
     <div id='hero' className='h-screen text-white p-4'>
-      <a href="/"><p className='fixed text-5xl font-black right-8 top-8'>H</p></a>
+      <a href="/"><motion.p drag className='fixed text-5xl font-black right-8 top-8'>H</motion.p></a>
         <div className='pt-[50%] md:pt-[20%] md:ml-10'>
             <h1 className='uppercase font-black text-3xl md:text-5xl lg:text-7xl'>Henrik Olsson</h1>
             <span className='text-xl font-semibold' ref={headline}></span>
